@@ -67,6 +67,7 @@ describe('reverseNestedObject', function () {
       group: {
         one: {
           oneInner: 'oneFinal',
+          oneAnother: 'oneAnotherFinal',
         },
         two: 'twoFinal',
       },
@@ -75,6 +76,11 @@ describe('reverseNestedObject', function () {
     let output3Value = {
       oneFinal: {
         oneInner: {
+          one: 'group',
+        },
+      },
+      oneAnotherFinal: {
+        oneAnother: {
           one: 'group',
         },
       },

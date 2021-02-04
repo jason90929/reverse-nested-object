@@ -43,6 +43,7 @@ let input3Value = {
   group: {
     one: {
       oneInner: 'oneFinal',
+      oneAnother: 'oneAnotherFinal',
     },
     two: 'twoFinal',
   },

@@ -1,7 +1,4 @@
 function reverseNestedObject(inputObject) {
-  let outputValue = {};
-  let nestedArray = [];
-
   function recursiveGetValue(value, parent) {
     if (typeof value === 'string') {
       return {
@@ -20,9 +17,7 @@ function reverseNestedObject(inputObject) {
     return obj;
   }
 
-  outputValue = recursiveGetValue(inputObject);
-
-  return outputValue;
+  return recursiveGetValue(inputObject);
 }
 
 export default reverseNestedObject;
