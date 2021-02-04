@@ -38,3 +38,15 @@ let input2Value = {
 
 const result2 = reverseNestedObject(input2Value);
 console.log('result2', result2);
+
+let input3Value = {
+  group: {
+    one: {
+      oneInner: 'oneFinal',
+    },
+    two: 'twoFinal',
+  },
+};
+
+const result3 = reverseNestedObject(input3Value);
+console.log('result3', result3);

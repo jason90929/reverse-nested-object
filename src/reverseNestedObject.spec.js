@@ -1,7 +1,7 @@
 import reverseNestedObject from './reverseNestedObject';
 
 describe('reverseNestedObject', function () {
-  it('should match reversed object', function () {
+  it('should match reversed object #1', function () {
     let input1Value = {
       hired: {
         be: {
@@ -26,7 +26,7 @@ describe('reverseNestedObject', function () {
     expect(JSON.stringify(result)).toEqual(JSON.stringify(output1Value));
   });
 
-  it('should match reversed object', function () {
+  it('should match reversed object #2', function () {
     let input2Value = {
       one: {
         oneIn: {
@@ -37,7 +37,7 @@ describe('reverseNestedObject', function () {
         twoIn: {
           twoInner: {
             twoInInner: 'twoFinal',
-          }
+          },
         },
       },
     };
@@ -60,5 +60,31 @@ describe('reverseNestedObject', function () {
     const result = reverseNestedObject(input2Value);
 
     expect(JSON.stringify(result)).toEqual(JSON.stringify(output2Value));
+  });
+
+  it('should match reversed object #3', function () {
+    let input3Value = {
+      group: {
+        one: {
+          oneInner: 'oneFinal',
+        },
+        two: 'twoFinal',
+      },
+    };
+
+    let output3Value = {
+      oneFinal: {
+        oneInner: {
+          one: 'group',
+        },
+      },
+      twoFinal: {
+        two: 'group',
+      },
+    };
+
+    const result = reverseNestedObject(input3Value);
+
+    expect(JSON.stringify(result)).toEqual(JSON.stringify(output3Value));
   });
 });
