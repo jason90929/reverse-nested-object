@@ -29,7 +29,9 @@ let input2Value = {
   },
   two: {
     twoIn: {
-      twoInner: 'twoFinal',
+      twoInner: {
+        twoInInner: 'twoFinal',
+      },
     },
   },
 };

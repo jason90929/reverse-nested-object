@@ -35,7 +35,9 @@ describe('reverseNestedObject', function () {
       },
       two: {
         twoIn: {
-          twoInner: 'twoFinal',
+          twoInner: {
+            twoInInner: 'twoFinal',
+          }
         },
       },
     };
@@ -47,8 +49,10 @@ describe('reverseNestedObject', function () {
         },
       },
       twoFinal: {
-        twoInner: {
-          twoIn: 'two',
+        twoInInner: {
+          twoInner: {
+            twoIn: 'two',
+          },
         },
       },
     };
